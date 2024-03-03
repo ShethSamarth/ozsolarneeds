@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 
 import { MotionButton } from "@/components/motion"
 
-export const Fab = () => {
+export const FAB = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false)
 
   useEffect(() => {
