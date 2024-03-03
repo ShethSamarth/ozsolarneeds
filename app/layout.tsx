@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
 
+import { Toaster } from "@/components/ui/sonner"
+
 import "./globals.css"
 
 const font = Poppins({
@@ -16,7 +18,10 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        {children}
+        <Toaster position="bottom-center" />
+      </body>
     </html>
   )
 }
