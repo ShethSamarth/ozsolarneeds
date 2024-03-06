@@ -18,7 +18,7 @@ export const Navbar = () => {
   const [packages, setPackages] = useState(false)
 
   return (
-    <header className="sticky top-0 bg-white/70 backdrop-blur-sm flex justify-between items-center p-3 z-50">
+    <header className="sticky top-0 bg-white/70 backdrop-blur-md flex justify-between items-center p-3 z-50">
       <Link href="/">
         <Image src="/logo.png" width={155} height={50} alt="Logo" />
       </Link>

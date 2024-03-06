@@ -1,15 +1,11 @@
-"use client"
+import { Metadata } from "next"
 
-import { signOut } from "next-auth/react"
-
-import { Button } from "@/components/ui/button"
+export const metadata: Metadata = {
+  title: "Dashboard",
+}
 
 const Dashboard = () => {
-  return (
-    <div>
-      <Button onClick={() => signOut()}>Sign Out</Button>
-    </div>
-  )
+  return <div>Dashboard</div>
 }
 
 export default Dashboard

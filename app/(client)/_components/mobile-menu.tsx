@@ -32,7 +32,7 @@ export const MobileMenu = () => {
                 src="/logo.png"
                 width={180}
                 height={50}
-                alt="Logo"
+                alt="Oz Solar Needs"
               />
             </Link>
           </SheetClose>

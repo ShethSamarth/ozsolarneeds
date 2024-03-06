@@ -81,15 +81,18 @@
 
 @layer components {
   .link {
-    @apply relative uppercase text-sm font-medium text-[#333333] py-4 before:absolute before:inset-x-0 before:bottom-2 before:h-[0.05rem] before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-[#739900] before:transition-all before:duration-200 hover:before:scale-x-100;
+    @apply relative uppercase text-sm font-medium text-gray-800 py-4 before:absolute before:inset-x-0 before:bottom-2 before:h-[0.05rem] before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-green before:transition-all before:duration-200 hover:before:scale-x-100;
   }
   .active-link {
-    @apply relative uppercase text-sm font-medium text-[#333333] py-4 before:absolute before:inset-x-0 before:bottom-2 before:h-[0.05rem] before:rounded-bl before:bg-[#739900];
+    @apply relative uppercase text-sm font-medium text-gray-800 py-4 before:absolute before:inset-x-0 before:bottom-2 before:h-[0.05rem] before:rounded-bl before:bg-green;
   }
   .sub-link {
-    @apply font-light capitalize text-base py-2 hover:text-[#739900];
+    @apply font-light capitalize text-base py-2 hover:text-green;
+  }
+  .form-input {
+    @apply w-full bg-formGray placeholder:font-light outline-green px-5 py-3;
   }
   .footer-link {
-    @apply relative text-sm font-medium text-[#333333] before:absolute before:inset-x-0 before:-bottom-1.5 before:h-[0.05rem] before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-[#333333] before:transition-all before:duration-300 hover:before:scale-x-100;
+    @apply relative text-sm font-medium text-gray-600 before:absolute before:inset-x-0 before:-bottom-1.5 before:h-[0.05rem] before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-[#333333] before:transition-all before:duration-300 hover:before:scale-x-100;
   }
 }
