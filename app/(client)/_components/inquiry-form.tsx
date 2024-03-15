@@ -10,12 +10,8 @@ import { Button } from "@/components/ui/button"
 const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
   email: z.string().email({ message: "Invalid email" }),
-  mobile_no: z.coerce
-    .number({ invalid_type_error: "Mobile no is required" })
-    .min(1, { message: "Mobile no is required" }),
-  postalCode: z.coerce
-    .number({ invalid_type_error: "Postal code is required" })
-    .min(1, { message: "Postal code is required" }),
+  mobile_no: z.string().min(1, { message: "Mobile no is required" }),
+  postalCode: z.string().min(1, { message: "Postal code is required" }),
   address: z.string().min(1, { message: "Address is required" }),
   message: z.string().min(1, { message: "Message is required" }),
 })
@@ -26,8 +22,8 @@ export const InquiryForm = () => {
     defaultValues: {
       name: "",
       email: "",
-      mobile_no: undefined,
-      postalCode: undefined,
+      mobile_no: "",
+      postalCode: "",
       address: "",
       message: "",
     },
@@ -36,7 +32,13 @@ export const InquiryForm = () => {
   const { isLoading, isSubmitting } = form.formState
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values)
+    try {
+      console.log(values)
+    } catch (error) {
+      console.log(error)
+    } finally {
+      form.reset()
+    }
   }
 
   return (

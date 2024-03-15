@@ -1,4 +1,10 @@
+import { Metadata } from "next"
+
 import { Banner } from "@/components/banner"
+
+export const metadata: Metadata = {
+  title: "Contacts",
+}
 
 const Contacts = () => {
   return (

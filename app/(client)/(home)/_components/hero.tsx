@@ -35,7 +35,7 @@ export const Hero = () => {
           </DialogContent>
         </Dialog>
       </div>
-      <ChevronsDown className="absolute left-1/2 bottom-5 translate-x-1/2 text-white size-7" />
+      <ChevronsDown className="absolute left-1/2 bottom-5 -translate-x-1/2 text-white size-7" />
       <Image
         className="h-[calc(100vh-15vh)] w-full object-cover"
         src="https://api.ozsolarneeds.com.au/uploads/banner/1706510128242-225597084.jpg"

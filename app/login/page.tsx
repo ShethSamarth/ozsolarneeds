@@ -8,13 +8,7 @@ import { useForm } from "react-hook-form"
 import { useRouter } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Form,
   FormControl,
@@ -42,7 +36,7 @@ const AdminLogin = () => {
     },
   })
 
-  const { isLoading, isSubmitting, isValid } = form.formState
+  const { isLoading, isSubmitting } = form.formState
 
   const onSubmit = async (values: z.infer<typeof LoginSchema>) => {
     await signIn("credentials", { ...values, redirect: false })
@@ -64,16 +58,16 @@ const AdminLogin = () => {
   }
 
   return (
-    <main className="flex flex-col h-screen justify-center items-center">
-      <Image
-        src="/admin-logo.png"
-        width={150}
-        height={50}
-        alt="Oz Solar Needs"
-        className="p-5"
-      />
+    <main className="flex flex-col h-screen justify-center items-center bg-slate-200">
       <Card className="w-80 md:w-96">
-        <CardHeader>
+        <Image
+          className="mx-auto pt-4"
+          src="/admin-logo.png"
+          width={120}
+          height={50}
+          alt="Oz Solar Needs"
+        />
+        <CardHeader className="items-center">
           <CardTitle>Welcome back</CardTitle>
           <CardDescription>Enter your credentials below</CardDescription>
         </CardHeader>
@@ -115,11 +109,7 @@ const AdminLogin = () => {
                   </FormItem>
                 )}
               />
-              <Button
-                type="submit"
-                className="w-full"
-                disabled={isLoading || isSubmitting || !isValid}
-              >
+              <Button type="submit" className="w-full" disabled={isLoading || isSubmitting}>
                 Login
               </Button>
             </form>
