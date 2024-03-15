@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "api.ozsolarneeds.com.au",
       },
+      {
+        protocol: "https",
+        hostname: "ozsolarneeds.com.au",
+      },
     ],
   },
 }

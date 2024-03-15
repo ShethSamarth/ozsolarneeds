@@ -19,18 +19,16 @@ export const Hero = () => {
           Solar Power Power That Shines
         </h1>
         <p className="text-sm md:text-base lg:text-lg text-white font-light text-center lg:text-left">
-          Our solar modules help accelerate the clean energytransition, making
-          the world healthier and more sustainable
+          Our solar modules help accelerate the clean energytransition, making the world healthier
+          and more sustainable
         </p>
         <Dialog>
           <DialogTrigger asChild>
-            <button className="bg-orange text-white font-medium capitalize rounded w-fit mx-auto lg:mx-0 px-6 py-4">
-              Book your free consultaion
-            </button>
+            <button className="orange-button">Book your free consultaion</button>
           </DialogTrigger>
           <DialogContent className="w-[80vw]">
             <DialogHeader>
-              <DialogTitle>Inquiry</DialogTitle>
+              <DialogTitle className="text-xl font-medium">Inquiry</DialogTitle>
             </DialogHeader>
             <hr />
             <InquiryForm />

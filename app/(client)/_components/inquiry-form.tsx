@@ -4,13 +4,7 @@ import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/components/ui/form"
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import { Button } from "@/components/ui/button"
 
 const formSchema = z.object({
@@ -39,7 +33,7 @@ export const InquiryForm = () => {
     },
   })
 
-  const { isLoading, isSubmitting, isValid } = form.formState
+  const { isLoading, isSubmitting } = form.formState
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     console.log(values)
@@ -158,9 +152,10 @@ export const InquiryForm = () => {
             </FormItem>
           )}
         />
+        <hr />
         <div className="flex justify-end">
           <Button
-            disabled={isLoading || isSubmitting || !isValid}
+            disabled={isLoading || isSubmitting}
             type="submit"
             size="lg"
             className="bg-orange hover:bg-orange/70 rounded-none"
